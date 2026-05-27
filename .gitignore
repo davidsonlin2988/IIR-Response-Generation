@@ -1,3 +1,6 @@
+# Generated analysis outputs — regenerable, should not be versioned
+IIR_outputs/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
