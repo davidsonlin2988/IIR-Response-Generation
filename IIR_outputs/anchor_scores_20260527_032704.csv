@@ -1,0 +1,13 @@
+level,story,anchor_local,anchor_global,anchor_causal,anchor_theme_loyalty,anchor_theme_empathy,anchor_theme_peer_pressure,anchor_theme_kindness,anchor_theme_loyalty_vs_honesty,anchor_theme_friendship,anchor_theme_integrity,anchor_theme_peer_loyalty,anchor_theme_temptation,anchor_theme_honesty,anchor_theme_consequences,anchor_theme_greed
+IIR0,cat,0.104,0.169,0.067,0.149,0.189,0.123,0.267,,,,,,,,
+IIR0,lying,0.279,0.238,0.115,,,,,0.215,0.317,0.321,0.289,,,,
+IIR0,stealing,0.192,0.105,0.08,,,,,,,,,0.318,0.224,0.096,0.128
+IIR1,cat,0.283,0.174,0.136,0.176,0.25,0.142,0.336,,,,,,,,
+IIR1,lying,0.5,0.258,0.176,,,,,0.049,0.408,0.286,0.411,,,,
+IIR1,stealing,0.497,0.248,0.267,,,,,,,,,0.378,0.406,0.193,0.319
+IIR2,cat,0.192,0.34,0.178,0.25,0.343,0.265,0.431,,,,,,,,
+IIR2,lying,0.252,0.361,0.123,,,,,0.301,0.5,0.366,0.446,,,,
+IIR2,stealing,0.226,0.365,0.216,,,,,,,,,0.467,0.357,0.169,0.503
+IIR3,cat,0.319,0.434,0.259,0.377,0.417,0.331,0.475,,,,,,,,
+IIR3,lying,0.402,0.481,0.209,,,,,0.329,0.578,0.426,0.482,,,,
+IIR3,stealing,0.553,0.422,0.346,,,,,,,,,0.539,0.487,0.19,0.506
