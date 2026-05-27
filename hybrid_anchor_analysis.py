@@ -156,7 +156,7 @@ def cosine_sim(a, b):
 
 OUTPUT_DIR    = "IIR_outputs"
 DEFAULT_INPUT = os.path.join(OUTPUT_DIR, "IIR_scenario_script.csv")
-FUZZY_THRESHOLD = 95
+FUZZY_THRESHOLD = 75
 WAYPOINTS = ["WAYPOINT0", "WAYPOINT1", "WAYPOINT2", "WAYPOINT3"]
 
 NEGATION_WORDS = {
@@ -169,10 +169,10 @@ NEGATION_WORDS = {
 W_KEYWORD  = 0.40
 W_SEMANTIC = 0.60
 # Keyword sub-weights (must sum to 1.0)
-W_LOCAL  = 0.25
+W_LOCAL  = 0.20
 W_GLOBAL = 0.25
-W_CAUSAL = 0.35   # higher because causal already encodes local/global grounding
-W_THEMES = 0.15
+W_CAUSAL = 0.30   # higher because causal already encodes local/global grounding
+W_THEMES = 0.25
 # Semantic quality weights per waypoint (W0=0 → W3=1)
 SEM_WEIGHTS = {"WAYPOINT0": 0.0, "WAYPOINT1": 1/3, "WAYPOINT2": 2/3, "WAYPOINT3": 1.0}
 
@@ -437,16 +437,34 @@ EXEMPLARS = {
         ],
         "WAYPOINT3": [
             {
-                "q1": "Bruno kept the cat because when he saw it shaking in the rain, cold and alone, he recognized that same feeling of being unwanted — nobody had wanted the cat, just like Bruno had been excluded by the boys. That empathy gave him the courage to act even when his friends threatened to cut him out of basketball.",
-                "q2": "The story showed that Bruno also knew what rejection felt like — he was the odd one out too. So when he saw the cat being mocked in the rain, he wasn't just responding to a cold animal; he was recognizing a shared experience of being an outcast. That connection made his choice meaningful.",
-                "q3": "The lesson is that real kindness requires courage. Bruno risked losing his friends by petting the wet, dirty cat, but he did it anyway because he understood what it felt like to be alone and rejected. True compassion means acting even when it costs you something.",
-                "q4": "The story gave us the detail that Bruno himself had been excluded — nobody wanted him either at first. World knowledge about empathy and peer pressure explains why he connected with the cat's situation and why standing up for it was such a meaningful choice despite the social cost.",
+                "q1": "The red headed boy kept the cat because he realized that the cat did not deserve to be bullied by the other students.",
+                "q2": "Friends should not be bullied, and if they are being bullied, we should be there to support them.",
+                "q3": "One lesson that can be learned is to always be there for your friends and to have empathy for those who are bullied.",
+                "q4": "It feels like the right thing to do, and it is what I am taught. The boy also did something nice for the cat, which implies empathy.",
             },
             {
-                "q1": "Bruno decided to keep the cat because he saw it cold, shaking, and alone in the rain and felt genuine empathy — he understood what it was like to be rejected himself. Even with his friends pressuring him to walk away, he chose compassion over fitting in.",
-                "q2": "The story carefully showed Bruno's own experience of exclusion before the cat scene. That parallel — an outcast choosing to help another outcast — is what makes it meaningful. His decision came from both what he observed in the story and a deeper understanding of belonging and rejection.",
-                "q3": "The lesson is that empathy and loyalty mean acting on your values even when you're pressured not to. Bruno knew the cat was cold and unwanted, and he knew from experience how that felt. He didn't just feel sorry — he did something about it, even at the risk of losing his place in the group.",
-                "q4": "The story and real-world knowledge work together here. The text showed the cat was wet, cold, and mocked, and that Bruno was under peer pressure. But understanding what it means to be a true friend — to show up even when it's hard — is what makes Bruno's final choice more than just kindness.",
+                "q1": "The boy kept the cat because he understood that the cat was a true friend, better than the bullies from before.",
+                "q2": "The boy realized that the bullies were not good friends, and that the cat was a better friend from the start.",
+                "q3": "We should not judge other people and make fun of them.",
+                "q4": "It is a mean thing to judge others and make people feel like they don't belong.",
+            },
+            {
+                "q1": "He kept the cat because he felt bad for his friends bullying the cat and wanted to thank the cat for comforting him. Everyone should be welcomed and accepted without being commented on their appearances.",
+                "q2": "I thought of this answer because the cat was being called stinky after it comforted the boy. I saw from the comic that the cat started crying and no one should be left aside and made fun of.",
+                "q3": "A lesson someone can learn from this is to not bully someone, especially without knowing the backstory. The friends didn't know the cat comforted the boy and started calling the cat stinky.",
+                "q4": "I thought of this answer because the cat was crying when the boys were bullying it. No one should be bullied because of their looks and left alone.",
+            },
+            {
+                "q1": "He kept the cat because he felt bad for the cat and because his friends were bullying the cat. He didn't want the cat to be bullied since no one deserves to be treated miserably.",
+                "q2": "The boy saw the cat crying, and then realized that his feelings were being hurt. The right thing to do is to help this cat since he is all alone.",
+                "q3": "A lesson someone can learn is be friendly to everyone and not judge someone based on their looks, which corresponds to the boys calling the cat dirty in the story.",
+                "q4": "I thought of this answer because the boys didn't even want to play with the red headed boy after he touched the cat. The cat was almost gonna be left aside. We should always take care of the people around us.",
+            },
+            {
+                "q1": "Because the cat was nice to Bruno when he was crying on the bench and so he must have wanted to return the favor. Additionally, Bruno didn't like other boys were teasing the cat for being dirty and smelly. He took the courage not to join such a mean behavior.",
+                "q2": "Because of the change in Bruno's behavior; initially he was curious about the cat, then he encounters other boys being mean, following them out of not being bullied himself, but in the end, he takes the courage to stand against the other boys.",
+                "q3": "One can take the courage to stand against a mean behavior and show kindness, especially when kindness is shown towards them.",
+                "q4": "Bruno changing his stance towards the cat: initially curious, followed by walking away so as not to be bullied, but then deciding to take the cat as he thought that's the right thing to do.",
             },
         ],
     },
@@ -496,16 +514,34 @@ EXEMPLARS = {
         ],
         "WAYPOINT3": [
             {
-                "q1": "Sarah didn't tell because Rachel reminded her they were best friends — and when someone that close asks for your silence, loyalty kicks in even when you know it's wrong. Sarah had watched Rachel bubbling in answers without studying and knew she was cheating, but saying something felt like a betrayal of their whole relationship.",
-                "q2": "The story showed that Sarah and Rachel had been friends since toddlers, so there was a really deep bond. That kind of history makes it feel almost impossible to turn someone in, even if your conscience knows you should. The friendship wasn't just a reason — it was the whole weight of the decision.",
-                "q3": "The lesson is that real friendships include honesty, not just loyalty. Protecting a friend from consequences might feel kind in the moment, but it lets them keep making bad choices. True friends sometimes have to say hard things.",
-                "q4": "In the story, Sarah clearly knew what Rachel was doing — she thought 'she must be guessing.' But Rachel's whisper put her in a bind between friendship and integrity. World knowledge about loyalty and moral conflict explains why Sarah stayed silent even though she wasn't comfortable.",
+                "q1": "Sarah does not tell the teacher to protect her from getting in trouble because she does not want her friend to be in trouble.",
+                "q2": "Loyal friends will try to keep each other safe and out of trouble, even if it means bending the rules a little bit.",
+                "q3": "We should try to study harder so that we don't need to cheat every time. But if we fall short, we should not punish our friends.",
+                "q4": "This is so that we can avoid this situation entirely by not needing to cheat, and if we get into a sticky situation, we know that our friends still have our back.",
             },
             {
-                "q1": "Sarah kept quiet because Rachel invoked their friendship, and Sarah didn't want to be seen as a traitor. Cheating is wrong, but betraying a best friend you've had since early childhood felt worse in the moment. She was caught between her conscience and her loyalty to Rachel.",
-                "q2": "The story told us they had been best friends since toddlers and were still close in middle school. That kind of long friendship creates a real sense of obligation — you don't just 'tell on' someone you grew up with. The text and our understanding of deep friendship both explain her silence.",
-                "q3": "The lesson is about the tension between loyalty and integrity. Staying quiet to protect Rachel wasn't really being a good friend — a true friend would have helped Rachel be honest instead of helping her get away with cheating.",
-                "q4": "The story gave us the detail that Sarah noticed Rachel was probably guessing first and then outright copying. Her final choice to say 'nothing is going on' despite knowing the truth shows how loyalty can override our moral compass, and how that can hurt both friends in the end.",
+                "q1": "Sarah does not want to betray her friend just because she cheated on her test.",
+                "q2": "It is not nice to tell on your friends. I would not want that to happen to me if I cheated.",
+                "q3": "People should not cheat because it is not a good thing to do.",
+                "q4": "Cheating is not something to be proud of because it is unfair and can hurt our learning, especially if we are cheating on tests.",
+            },
+            {
+                "q1": "She didn't tell the teacher because Rachel told her to not tell the teacher since they are best friends. Friends are suppose to help each other.",
+                "q2": "I thought of that answer because friends are suppose to defend each other, especially when Rachel asked Sarah to cover for her.",
+                "q3": "A lesson someone can learn is that lying to defend your friend can be unfair to others. The boy in the picture didn't know at all his answer was being copied.",
+                "q4": "I thought of this answer because it is unfair to have your answer copied. In the comic, Sarah lied to the teacher even though she knew that it would be unfair to the boy and to everyone else in the class.",
+            },
+            {
+                "q1": "She didn't tell the teacher because Rachel is her best friend. We often feel the need to defend people we feel closest to us and to not get them in trouble.",
+                "q2": "I thought of that answer because Rachel begged her to not tell the teacher. Sarah didn't want to tell because best friends don't betray each other.",
+                "q3": "A lesson someone can learn is that sometimes defending people you feel close to isn't the best way to guide them to do the right thing. Sarah didn't snitch on Rachel, which is unfair to the student that got his answer copied.",
+                "q4": "I thought of this answer because Sarah lied to the teacher and lying isn't the best way to approach this kind of situation. It is unfair to everyone else in the class.",
+            },
+            {
+                "q1": "Because Rachel is her best friend, and we help our friends when we can.",
+                "q2": "Friendship overweights morality sometimes; plus Rachel explicitly tells Sarah not to tell the teacher.",
+                "q3": "Not sure if there is a lesson. Sarah appears to be weighing her friendship to Rachel more than being morally correct.",
+                "q4": "Because she basically followed what Rachel told her to do and didn't confront her about cheating.",
             },
         ],
     },
@@ -555,16 +591,34 @@ EXEMPLARS = {
         ],
         "WAYPOINT3": [
             {
-                "q1": "Billy kept the wallet because his frustration had already built up — his parents refused the bike, and then seeing $300 sitting there felt like the universe handing him what he'd been denied. He knew it was wrong, but resentment and unexpected opportunity together made stealing feel justifiable in the moment.",
-                "q2": "The story carefully set up Billy's emotional state before the wallet appeared — he was sad and mad after his parents said no, and ice cream was his way of coping. So when $300 landed in front of him, it wasn't a random temptation; it felt like a solution to something he was already stewing over.",
-                "q3": "The lesson is that desire and resentment together are dangerous. Billy didn't just steal — he also lied to the lady's face. The story shows how one bad decision leads to another, and that letting greed take over means you have to keep being dishonest to protect it.",
-                "q4": "The story gave us both the emotional build-up (wanting the bike, being told no, feeling mad) and the specific moment of temptation (the $300 wallet). World knowledge about how greed and frustration make people rationalize wrong decisions adds depth to understanding why Billy did what he did.",
+                "q1": "Billy kept the lady's wallet because he wanted to keep the money to buy a new bike.",
+                "q2": "Billy was upset that his parents won't buy him a new bike, so when he found the money, he wanted to use it for the new bike.",
+                "q3": "One lesson could be to always double check before leaving so that you don't forget anything.",
+                "q4": "I would not want to lose something and have someone steal it. If I didn't forget anything, people would not have the chance to steal from me.",
             },
             {
-                "q1": "Billy kept the wallet because he had been wanting the bike intensely and had already been told he couldn't have it. When he found a wallet with exactly the right amount, the temptation was too strong — desire and opportunity lined up at just the right moment when his emotional guard was down.",
-                "q2": "The story showed Billy had been trying to get the bike legitimately first — he asked nicely and got told no. That rejection made him feel like he deserved it somehow. That's why when the wallet appeared, he grabbed it instead of returning it. The text gave us the full emotional arc.",
-                "q3": "The lesson is that how we handle frustration determines our character. Billy's path from wanting the bike honestly, to being told no, to stealing and lying shows how desire can erode our values step by step if we let it.",
-                "q4": "The story gave Billy a whole emotional journey — wanting, being denied, feeling sad and mad — before the wallet appeared. That context is what makes the stealing understandable even if it's wrong. Real integrity means doing the right thing even when you're frustrated and tempted.",
+                "q1": "Billy kept the lady's wallet because he thought about using the money inside to buy a new bike.",
+                "q2": "Billy expressed interest in a new bike, but he could not get it because it was too expensive.",
+                "q3": "Don't steal from other people, but instead work to earn the money some other way to get what you want.",
+                "q4": "I have been taught that if I want something, I should be on my best behavior, or do something to earn it. Nothing comes for free.",
+            },
+            {
+                "q1": "Billy kept the wallet because he really wanted the red bike. Having that would make him look as cool as the others, and would make him happier.",
+                "q2": "I thought of that answer because of the way Billy was looking at the bike, and knowing that free money can bring people a lot of joy.",
+                "q3": "A lesson someone can learn is that lying to someone about not having something that belongs to them is the same as stealing. In the story, it is clear that Billy stole her wallet since he didn't want to give it back.",
+                "q4": "I thought of the answer from seeing how sad that lady was when she asked him. I know that if you don't return something back to their owner, this action counts as stealing.",
+            },
+            {
+                "q1": "Billy kept the wallet because he wanted the money for the bike. He thinks that if he lies, the lady will never find out that he stole the money.",
+                "q2": "I thought of that answer because Billy thought to himself that he can use the 300 to buy a new bike. This way he doesn't have to get his parents' approval.",
+                "q3": "A lesson someone can learn is that you shouldn't steal something in the goal of benefitting yourself. It could bring harm to others, such as the lady losing 300 dollars.",
+                "q4": "I thought of that answer from seeing Billy's reasoning from the text and inferring how sad the lady will be after hearing his answers.",
+            },
+            {
+                "q1": "Because he wanted to buy the new expensive bike.",
+                "q2": "His parents indicated that they won't buy him the bike, so he needed to find another way to buy it.",
+                "q3": "One should not keep other's money just because they want to buy something.",
+                "q4": "Because it is not morally correct to lie about the lady's wallet when he took it.",
             },
         ],
     },
@@ -748,11 +802,8 @@ def _semantic_from_embedding(resp_emb, story, q_key):
     else:
         predicted = None
 
-    total_sim = sum(sim_by_wp.values())
-    if total_sim > 0:
-        semantic_quality = sum(sim_by_wp[wp] * SEM_WEIGHTS[wp] for wp in WAYPOINTS) / total_sim
-    else:
-        semantic_quality = 0.0
+    sum_weights = sum(SEM_WEIGHTS.values())  # 0 + 1/3 + 2/3 + 1.0 = 2.0
+    semantic_quality = sum(sim_by_wp[wp] * SEM_WEIGHTS[wp] for wp in WAYPOINTS) / sum_weights
 
     return {
         "sim_WAYPOINT0":      round(sim_by_wp["WAYPOINT0"], 4),
