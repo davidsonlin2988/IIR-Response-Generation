@@ -1,0 +1,124 @@
+{
+  "experience_levels": {
+    "low": {
+      "label": "Low experience",
+      "definition": "Student has little to no prior experience with this type of reading task.",
+      "student_profile": {
+        "age": "10-12",
+        "reading_level": "below grade level",
+        "vocabulary_level": "basic",
+        "response_length_tendency": "one to a few words",
+        "sentence_structure": "simple, one clause",
+        "punctuation_habits": "none or inconsistent",
+        "capitalization_habits": "all lowercase or inconsistent",
+        "uses_slang": "often",
+        "rereads_when_confused": "no"
+      }
+    },
+    "moderate": {
+      "label": "Moderate experience",
+      "definition": "Student has some prior experience with this type of reading task.",
+      "student_profile": {
+        "age": "12-15",
+        "reading_level": "at grade level",
+        "vocabulary_level": "grade-appropriate",
+        "response_length_tendency": "one to two short sentences",
+        "sentence_structure": "simple or some compound sentences, occasional run-ons",
+        "punctuation_habits": "inconsistent",
+        "capitalization_habits": "inconsistent",
+        "uses_slang": "sometimes",
+        "rereads_when_confused": "sometimes"
+      }
+    },
+    "high": {
+      "label": "High experience",
+      "definition": "Student has substantial prior experience with this type of reading task. Responses are fluent, articulate, and developed. Vocabulary is varied and ideas are expressed with clarity.",
+      "student_profile": {
+        "age": "11-12",
+        "reading_level": "above grade level",
+        "vocabulary_level": "advanced",
+        "response_length_tendency": "one to two long sentences",
+        "sentence_structure": "varied, uses subordinate clauses",
+        "punctuation_habits": "mostly correct",
+        "capitalization_habits": "mostly correct",
+        "uses_slang": "rarely",
+        "rereads_when_confused": "yes"
+      }
+    }
+  },
+  "personality_types": {
+    "_note": "All personality traits describe EXPRESSION STYLE ONLY — tone, presentation, and surface writing features. They do NOT determine reasoning depth or inference type. Those are fully controlled by the IIR waypoint. A low-openness, low-conscientiousness student assigned IIR3 still integrates text and world knowledge; they just express it plainly and sloppily. A high-openness, high-conscientiousness student assigned IIR0 still gives a non-inference; they just write it colorfully and neatly.",
+    "openness": {
+      "label": "Openness to Experience",
+      "definition": "How expressive, colorful, and elaborative the student's writing tone is. Does NOT determine what they reason about — only how they stylistically present it.",
+      "low": {
+        "description": "Flat, plain, matter-of-fact tone. Writes just what is needed with no personal flair or embellishment. May seem tonally disengaged even when their reasoning is solid. Does not add color, asides, or vivid language.",
+        "writing_tendencies": [
+          "plain, no-frills word choices",
+          "does not add personal asides or emotional color",
+          "writes the minimum to convey the point",
+          "tone is neutral or detached regardless of content"
+        ],
+        "engagement_style": "plain, terse, tonally flat"
+      },
+      "high": {
+        "description": "Expressive and colorful in tone. Adds personal asides, vivid or dramatic language, and enthusiasm. May write more than needed due to expressive style, not because of deeper reasoning.",
+        "writing_tendencies": [
+          "uses vivid or emotional adjectives",
+          "adds personal flavor or enthusiasm ('omg', 'that's so sad', 'i really felt like...')",
+          "may over-elaborate in expression even when the reasoning itself is simple",
+          "energetic or dramatic tone"
+        ],
+        "engagement_style": "expressive, colorful, tonally engaged"
+      }
+    },
+    "conscientiousness": {
+      "label": "Conscientiousness",
+      "definition": "How carefully the student presents their writing — punctuation, capitalization, neatness, staying on format. Does NOT determine reasoning quality or inference depth.",
+      "low": {
+        "description": "Careless with surface presentation. Skips punctuation and capitalization. Writes quickly without polishing. Answers the question per their IIR waypoint, just sloppily. Brevity reflects low effort in writing, not low reasoning ability.",
+        "writing_tendencies": [
+          "skips punctuation and capitalization",
+          "does not proofread or self-correct surface errors",
+          "may truncate writing mid-thought due to low effort, not lack of understanding",
+          "informal, unpolished presentation"
+        ],
+        "engagement_style": "low-effort presentation, quick, unpolished"
+      },
+      "high": {
+        "description": "Neat and organized in presentation. Uses correct punctuation and capitalization. Doesn't ramble. Stays on format. Surface quality of writing is high regardless of reasoning depth.",
+        "writing_tendencies": [
+          "correct or near-correct punctuation and capitalization",
+          "organized, clear sentence structure",
+          "does not ramble or go off-format",
+          "polished presentation regardless of IIR level"
+        ],
+        "engagement_style": "organized, polished, task-formatted"
+      }
+    },
+    "neuroticism": {
+      "label": "Neuroticism",
+      "definition": "How confident or uncertain the student's tone sounds. Affects hedging language and emotional tone in expression. Does NOT change what the student reasons — only how confidently they express it.",
+      "low": {
+        "description": "Confident, direct tone. Writes declaratively without qualifying or second-guessing the expression. Sounds sure of themselves in how they phrase things, regardless of actual reasoning depth.",
+        "writing_tendencies": [
+          "declarative, unhedged phrasing ('he did it because...', 'the lesson is...')",
+          "no unnecessary qualifiers or apologies",
+          "consistent, steady tone throughout",
+          "sounds confident even when the underlying reasoning is thin"
+        ],
+        "engagement_style": "confident, direct, tonally steady"
+      },
+      "high": {
+        "description": "Uncertain, hedging tone. Qualifies and second-guesses how things are expressed. Sounds unsure even when the underlying reasoning is solid. The hedging is a surface feature of presentation, not an indicator of weak inference.",
+        "writing_tendencies": [
+          "frequent hedging ('I think', 'maybe', 'I'm not sure but...')",
+          "may apologize or over-qualify ('this might be wrong but...')",
+          "emotionally reactive tone when story content is distressing",
+          "may trail off or seem uncertain in expression even at high IIR levels"
+        ],
+        "engagement_style": "hedging, uncertain-sounding, emotionally reactive in tone"
+      }
+    }
+  }
+}
